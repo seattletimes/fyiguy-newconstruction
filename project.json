@@ -1,0 +1,17 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "questionable-stele"
+    },
+    "live": {
+      "bucket": "project.seattletimes.com",
+      "path": "2017/fyi-guy/new-construction"
+    }
+  },
+  "title": "",
+  "description": "",
+  "url": "",
+  "slug": "",
+  "tags": []
+}

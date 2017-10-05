@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>
+    <%= json.project.title %>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Safari, you're the worst -->
+  <meta name='format-detection' content='telephone=no'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <%= t.include("partials/_head.html") %>
+</head>
+
+<body>
+
+  <responsive-child class="map-container">
+    <div class="outmost">
+      <section class="chatter">
+        <h1>Seattle apartment boom</h1>
+        <p>More than 300 multifamily apartment buildings have been completed in Seattle since 2010, according to the commercial real-estate data company CoStar.</p>
+      </section>
+
+      <div class="aspect-ratio-outer">
+        <div class="aspect-ratio-inner">
+
+          <leaflet-map zoom=12>
+            <tile-layer layer="cartoPositron"></tile-layer>
+          </leaflet-map>
+
+        </div>
+        <!-- <aside class="legend">
+          <h1>Map legend</h1>
+          <ul class="scale">
+            <li>
+              <span class="block" style="background-color: red"></span> Cherry</li>
+            <li>
+              <span class="block" style="background-color: orange"></span> Orange</li>
+            <li>
+              <span class="block" style="background-color: yellow"></span> Lemon</li>
+            <li>
+              <span class="block" style="background-color: green"></span> Lime</li>
+            <li>
+              <span class="block" style="background-color: blue"></span> Blueberry</li>
+          </ul>
+        </aside> -->
+      </div>
+
+
+      <div class="source">Source: CoStar
+        <span class="credit">Emily M. Eng / THE SEATTLE TIMES</div>
+    </div>
+  </responsive-child>
+
+  <script src="app.js"></script>
+  <% /*= t.include("partials/_foot.html"); */ %>
+    <%= t.include("partials/_workHere.html") %>
+</body>
+
+</html>
